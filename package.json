@@ -1,0 +1,15 @@
+{
+  "name": "mise-kitchen-journal",
+  "version": "1.0.0",
+  "description": "MISE — The Kitchen Journal | Editorial Food & Recipe Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

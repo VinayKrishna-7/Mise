@@ -1,0 +1,16 @@
+{
+  "name": "MISE — The Kitchen Journal",
+  "short_name": "MISE",
+  "description": "Discover recipes, seasonal preparations, and cooking techniques in MISE — The Kitchen Journal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F3ED",
+  "theme_color": "#A64B32",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

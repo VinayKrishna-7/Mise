@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MISE — The Kitchen Journal</title>
+    <meta name="description" content="Explore handcrafted recipes, cooking techniques, and step-by-step guides. A modern culinary platform for food lovers." />
+    <meta property="og:title" content="MISE — The Kitchen Journal" />
+    <meta property="og:description" content="Explore handcrafted recipes, cooking techniques, and step-by-step guides." />
+    <meta property="og:site_name" content="MISE — The Kitchen Journal" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MISE — The Kitchen Journal" />
+    <meta name="twitter:description" content="Explore handcrafted recipes, cooking techniques, and step-by-step guides." />
+    <meta name="application-name" content="MISE" />
+    <meta name="apple-mobile-web-app-title" content="MISE" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Zero-flash inline theme loader -->
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('mise_theme') || localStorage.getItem('recipehub_theme');
+          if (saved && !localStorage.getItem('mise_theme')) {
+            localStorage.setItem('mise_theme', saved);
+          }
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-orange-500 selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
