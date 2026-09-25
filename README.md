@@ -19,7 +19,6 @@
 * **Descriptor:** `The Kitchen Journal`
 * **Presentation:** `MISE — The Kitchen Journal`
 * **Browser Tab Title:** `MISE — The Kitchen Journal`
-* **Favicon:** Culinary orange tile with white utensils (`favicon.svg`, `favicon.ico`, `favicon.png`)
 
 ---
 
