@@ -1,8 +1,8 @@
 # MISE — The Kitchen Journal
 
-> A full-stack recipe discovery and publishing application built with React, Express, Node.js, and MongoDB.
+> A full-stack recipe discovery and publishing application built with React 18, Express 4, Node.js, and MongoDB.
 
-**MISE — The Kitchen Journal** provides home cooks with a curated collection of kitchen-tested recipes, step-by-step techniques, and recipe authoring tools without requiring mandatory accounts or paywalls.
+**MISE** is an open recipe discovery and publishing platform. It includes a database of 123 documented recipes with ingredient scaling, checkable instruction steps, full-text search, multi-criteria filtering, local bookmarking, and recipe creation without mandatory user accounts.
 
 ---
 
@@ -10,13 +10,13 @@
 
 * **Brand Name:** `MISE`
 * **Descriptor:** `The Kitchen Journal`
-* **Official Presentation:** `MISE — The Kitchen Journal`
+* **Presentation:** `MISE — The Kitchen Journal`
 * **Browser Tab Title:** `MISE — The Kitchen Journal`
-* **Favicon:** Terracotta tile with white kitchen utensils (`favicon.svg`, `favicon.ico`, `favicon.png`)
+* **Favicon:** Culinary orange tile with white utensils (`favicon.svg`, `favicon.ico`, `favicon.png`)
 
 ---
 
-## Highlights & Verified Metrics
+## Verified Database Metrics
 
 * **123 Complete Recipes:** Every dish includes photographs, ingredient measurements, and cooking instructions.
 * **123 Protected System Recipes:** All initial seed dishes are protected with `isSystem: true`; the server rejects modification or deletion requests with `403 Forbidden`.
@@ -39,20 +39,20 @@
 * Active filter pills with individual remove actions and a single-click reset.
 
 ### 3. Interactive Cooking Tools
-* **Dynamic Servings Scaler:** Real-time `− / +` serving adjuster that scales ingredient quantities proportionally.
+* **Dynamic Servings Scaler:** `− / +` serving adjuster that recalculates ingredient quantities proportionally.
 * **Ingredient Checklist:** Interactive checkboxes with strike-through states persisted in `localStorage`.
-* **Distraction-Free Cooking Mode:** Full-screen layout with oversized typography, step progression, and keyboard navigation.
+* **Cooking Mode:** Full-screen layout with oversized step typography, forward/back navigation, and ingredient drawer.
 
-### 4. Personal Recipe Collection (Saved Recipes)
-* One-click bookmarking (heart icon) stored locally in browser storage (`mise_saved`).
+### 4. Saved Recipes (Local Bookmarks)
+* One-click bookmarking (heart icon) stored in browser storage (`mise_saved`).
 * Live counter badge in the navigation bar and dedicated "Saved Only" archive filter.
 
-### 5. Server-Enforced Rating System & Community Notes
+### 5. Server-Enforced Rating System & Comments
 * 1-to-5 star rating submission with server-side average calculation and total vote tracking.
 * **Server-Side Rating Protection:**
   * Strict integer validation (1–5) returning `400 Bad Request` for invalid scores.
   * Duplicate vote prevention via client identifier (`x-client-id` header with IP hash fallback), returning `409 Conflict` if a client has already rated that recipe.
-* Community culinary notes and discussion threads for every recipe.
+* Comment threads on each recipe page with creator deletion controls.
 
 ### 6. Recipe Authoring & Edit Authorization
 * Recipe submission form with drag-and-drop cover photo upload, dynamic ingredient arrays, numbered instruction steps, and tag pills.
@@ -64,32 +64,38 @@
 
 ---
 
-## Visual System & Typography
+## Design System & Typography
 
 ### Modern Typography System
-* **Headings & Display:** **Outfit** (weights 400 to 800) — Bold, geometric contemporary display font for titles, badges, and wordmarks.
-* **Interface & Body Text:** **Plus Jakarta Sans** (weights 300 to 800) — Clean, crisp contemporary sans-serif for UI controls, body copy, and metadata.
+* **Headings & Display (`font-display`, `font-heading`, `font-serif`):** **Outfit** (weights 400 to 800) — geometric contemporary display font for titles, badges, and wordmarks.
+* **Body & Interface (`font-sans`):** **Plus Jakarta Sans** (weights 300 to 800) — clean geometric contemporary sans-serif for UI controls, body copy, and metadata.
 
-### Clean Surfaces & Appetizing Culinary Palette
+### Clean Surfaces & Culinary Palette
 * **Light Theme:**
   * Background: `#F8FAFC` (Slate 50)
   * Card Surfaces: `#FFFFFF` (Pure White)
-  * Text: `#0F172A` (Slate 900)
-  * Culinary Accents: Vibrant orange (`#F97316`) and amber gradients (`from-orange-500 to-amber-500`) with ambient glow (`shadow-glow`)
-  * Border: `#E2E8F0`
+  * Text Primary: `#0F172A` (Slate 900)
+  * Text Muted: `#64748B` (Slate 500)
+  * Culinary Accents: Vibrant culinary orange (`#F97316`) and amber gradient (`from-orange-500 to-amber-500`) with ambient glow (`shadow-glow`)
+  * Border: `#E2E8F0` (Slate 200)
 * **Dark Theme:**
   * Background: `#0F172A` (Slate 900)
   * Card Surfaces: `#1E293B` (Slate 800)
-  * Text: `#F8FAFC` (Slate 50)
+  * Elevated Surfaces: `#334155` (Slate 700)
+  * Text Primary: `#F8FAFC` (Slate 50)
+  * Text Muted: `#94A3B8` (Slate 400)
   * Culinary Accents: Warm amber orange (`#FB923C`)
-  * Border: `#334155`
-* **Semantic Indicators:** Emerald for quick meals (≤ 30m), rose for saved bookmarks, amber for ratings.
+  * Border: `#334155` (Slate 700)
+* **Semantic Status Indicators:**
+  * **Emerald (`#10B981`):** Quick meals (≤ 30m)
+  * **Rose (`#F43F5E`):** Saved recipe bookmarks
+  * **Amber (`#F59E0B`):** Star ratings and review counts
 
-### Tactile Curves & Modern Geometry
+### Tactile Curves & Geometry
 * **`rounded-2xl` (16px):** Recipe cards, form containers, filter panels, and modal dialogs.
 * **`rounded-3xl` (24px):** Hero spotlight cards and recipe detail banners.
 * **`rounded-full`:** Search input bars, category pill filters, tags, and action buttons.
-* **Elevation:** Layered smooth drop shadows (`shadow-sm`, `shadow-card`, `shadow-card-hover`, `shadow-glow`).
+* **Elevation & Shadows:** Smooth drop shadows (`shadow-sm`, `shadow-card`, `shadow-card-hover`, and `shadow-glow`).
 
 ---
 
@@ -99,7 +105,7 @@
 * **React 18** + **Vite**
 * **Tailwind CSS v3** with custom theme tokens
 * **React Router DOM v6**
-* **Axios** (with automatic `x-creator-token` and `x-client-id` interceptors)
+* **Axios** (with automatic `x-creator-token` and `x-client-id` request interceptors)
 * **React Hook Form** (dynamic field arrays for ingredients and steps)
 * **Lucide React** (icons)
 
@@ -121,6 +127,7 @@ The backend uses Mongoose 7 models for data access (`Recipe`, `Comment`, `Rating
 ### Prerequisites
 * **Node.js** (v18 or higher recommended)
 * **npm** (bundled with Node.js)
+* **Git**
 
 ---
 
@@ -260,13 +267,12 @@ VITE_API_URL=http://localhost:5000/api
 ## Project Structure
 
 ```text
-Food Recipe App/
+Mise/
 ├── client/                     # Frontend React + Vite application
 │   ├── public/
-│   │   ├── favicon.svg         # Vector brand favicon (Terracotta tile with utensils)
+│   │   ├── favicon.svg         # Vector brand favicon (Orange tile with white utensils)
 │   │   ├── favicon.ico         # Standard 32x32 ICO favicon
 │   │   ├── favicon.png         # 32x32 PNG favicon
-│   │   ├── vite.svg            # Fallback favicon
 │   │   └── manifest.json       # Web app manifest
 │   ├── src/
 │   │   ├── components/         # Reusable UI components
@@ -292,6 +298,8 @@ Food Recipe App/
 │   │   │   ├── SavedRecipesContext.jsx
 │   │   │   ├── ThemeContext.jsx
 │   │   │   └── ToastContext.jsx
+│   │   ├── hooks/
+│   │   │   └── useToast.js
 │   │   ├── pages/              # Route views
 │   │   │   ├── AddRecipe.jsx
 │   │   │   ├── EditRecipe.jsx
@@ -302,7 +310,7 @@ Food Recipe App/
 │   │   ├── services/
 │   │   │   └── api.js          # Axios instance and request interceptors
 │   │   ├── utils/
-│   │   │   ├── constants.js    # Cuisines, categories, and editorial copy
+│   │   │   ├── constants.js    # Cuisines, categories, and constants
 │   │   │   └── helpers.js      # Unit formatting, image handlers, and time formatters
 │   │   ├── App.jsx             # Main layout and route configuration
 │   │   ├── index.css           # Design tokens, custom utility classes, and base styles
@@ -321,6 +329,7 @@ Food Recipe App/
 │   │   └── recipeController.js
 │   ├── middleware/             # Express middlewares
 │   │   ├── errorHandler.js     # Centralized error handler
+│   │   ├── rateLimiter.js      # Rate limiting middleware
 │   │   └── upload.js           # Multer configuration for cover photos
 │   ├── models/                 # Mongoose schemas
 │   │   ├── Comment.js
@@ -337,7 +346,7 @@ Food Recipe App/
 │   ├── server.js               # Express application entry point
 │   └── package.json
 │
-├── LICENSE
+├── LICENSE                     # MIT License
 ├── package.json                # Root package orchestration scripts
 └── README.md
 ```
@@ -346,4 +355,4 @@ Food Recipe App/
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
