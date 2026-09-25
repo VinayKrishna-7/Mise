@@ -37,6 +37,10 @@ process.on('unhandledRejection', (err) => {
   process.exit(1);
 });
 
-connectDB().then(() => {
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-});
+if (require.main === module) {
+  connectDB().then(() => {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  });
+}
+
+module.exports = { app, connectDB };

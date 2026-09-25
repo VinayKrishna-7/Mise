@@ -1,5 +1,13 @@
 # MISE — The Kitchen Journal
 
+[![CI Status](https://github.com/VinayKrishna-7/Mise/actions/workflows/ci.yml/badge.svg)](https://github.com/VinayKrishna-7/Mise/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-4.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A518.0-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18-000000?logo=express&logoColor=white)](https://expressjs.com/)
+
 > A full-stack recipe discovery and publishing application built with React 18, Express 4, Node.js, and MongoDB.
 
 **MISE** is an open recipe discovery and publishing platform. It includes a database of 123 documented recipes with ingredient scaling, checkable instruction steps, full-text search, multi-criteria filtering, local bookmarking, and recipe creation without mandatory user accounts.
@@ -227,6 +235,16 @@ npm run preview
 
 ---
 
+### Automated Testing
+
+MISE includes an automated smoke and data integrity test suite utilizing native Node.js test assertions. It verifies API health, exact recipe statistics (123 total, 72 quick meals, 13 cuisines), pagination, search queries, system recipe mutation blocks, and rating score validation:
+
+```bash
+npm test
+```
+
+---
+
 ## Environment Variables
 
 ### Server Configuration (`server/.env`)
@@ -268,6 +286,10 @@ VITE_API_URL=http://localhost:5000/api
 
 ```text
 Mise/
+├── .github/
+│   └── workflows/
+│       └── ci.yml              # GitHub Actions CI workflow (Node 18 & 20)
+│
 ├── client/                     # Frontend React + Vite application
 │   ├── public/
 │   │   ├── favicon.svg         # Vector brand favicon (Orange tile with white utensils)
@@ -340,16 +362,25 @@ Mise/
 │   │   └── recipeRoutes.js
 │   ├── services/
 │   │   └── imageService.js     # Image file deletion and cleanup
+│   ├── test/                   # Automated API test suite
+│   │   └── api.test.js         # Native Node.js test runner smoke tests
 │   ├── data/                   # Persistent database storage directory (db.json)
 │   ├── uploads/                # User-uploaded recipe photography
 │   ├── seed.js                 # Seeder script (123 system recipes)
 │   ├── server.js               # Express application entry point
 │   └── package.json
 │
+├── CONTRIBUTING.md             # Contributor guidelines
 ├── LICENSE                     # MIT License
 ├── package.json                # Root package orchestration scripts
 └── README.md
 ```
+
+---
+
+## Contributing
+
+Contributions, bug reports, and suggestions are welcome. Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for local development setup, code standards, and pull request procedures.
 
 ---
 

@@ -2,10 +2,31 @@
   "name": "mise-kitchen-journal",
   "version": "1.0.0",
   "description": "MISE — The Kitchen Journal | Editorial Food & Recipe Platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VinayKrishna-7/Mise.git"
+  },
+  "homepage": "https://github.com/VinayKrishna-7/Mise#readme",
+  "bugs": {
+    "url": "https://github.com/VinayKrishna-7/Mise/issues"
+  },
+  "author": "Vinay Krishna",
+  "license": "MIT",
+  "keywords": [
+    "recipes",
+    "cooking",
+    "kitchen-journal",
+    "food",
+    "react",
+    "express",
+    "nodejs",
+    "tailwind-css"
+  ],
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "npm --prefix server run dev",
     "client": "npm --prefix client run dev",
+    "test": "node --test server/test/api.test.js",
     "seed": "npm --prefix server run seed",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install"
   },

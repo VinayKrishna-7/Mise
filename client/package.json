@@ -1,20 +1,29 @@
 {
   "name": "mise-client",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "MISE frontend single-page application",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VinayKrishna-7/Mise.git",
+    "directory": "client"
+  },
+  "homepage": "https://github.com/VinayKrishna-7/Mise#readme",
+  "author": "Vinay Krishna",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
     "axios": "^1.6.0",
     "lucide-react": "^0.292.0",
-    "react-hook-form": "^7.47.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
+    "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
