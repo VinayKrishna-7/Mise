@@ -1,8 +1,6 @@
 # Mise
 
-A full-stack recipe manager and cooking app built with React, Node.js, and Express.
-
-It includes full-text search, multi-criteria filtering, serving size recalculation, interactive ingredient checklists, a step-by-step cooking mode, saved recipes, and a form to add and edit recipes with photo uploads.
+A recipe discovery and cooking web app built with React, Node.js, and Express. Browse dishes across different cuisines, scale ingredients by serving size, and follow along with a step-by-step cooking mode.
 
 ## Features
 
