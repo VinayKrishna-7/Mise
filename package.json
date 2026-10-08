@@ -1,7 +1,7 @@
 {
   "name": "mise-kitchen-journal",
   "version": "1.0.0",
-  "description": "Recipe discovery and cooking web app built with React, Node.js, and Express",
+  "description": "Recipe discovery and cooking web app",
   "repository": {
     "type": "git",
     "url": "https://github.com/VinayKrishna-7/Mise.git"

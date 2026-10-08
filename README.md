@@ -1,6 +1,6 @@
 # Mise
 
-A recipe discovery and cooking web app built with React, Node.js, and Express. Browse dishes across different cuisines, scale ingredients by serving size, and follow along with a step-by-step cooking mode.
+A recipe discovery and cooking web app. Browse dishes across different cuisines, scale ingredients by serving size, and follow along with a step-by-step cooking mode.
 
 ## Features
 
@@ -12,6 +12,12 @@ A recipe discovery and cooking web app built with React, Node.js, and Express. B
 - **Add & Edit Recipes** – Upload photos, add ingredients and steps, and update your dishes
 - **Ratings & Reviews** – Rate recipes from 1 to 5 stars and leave comments
 - **Dark Mode** – Clean dark and light theme toggle
+
+## Tech Stack
+
+- **Frontend** – React 18, Vite, Tailwind CSS, React Router
+- **Backend** – Node.js, Express, Multer
+- **Database** – MongoDB / Local JSON storage
 
 ## Getting Started
 
