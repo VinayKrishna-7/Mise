@@ -10,7 +10,6 @@
   },
   "homepage": "https://github.com/VinayKrishna-7/Mise#readme",
   "author": "Vinay Krishna",
-  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",

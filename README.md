@@ -46,7 +46,3 @@ It includes full-text search, multi-criteria filtering, serving size recalculati
    ```bash
    npm run dev
    ```
-
-## License
-
-[MIT](LICENSE)

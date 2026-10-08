@@ -11,7 +11,6 @@
   },
   "homepage": "https://github.com/VinayKrishna-7/Mise#readme",
   "author": "Vinay Krishna",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
