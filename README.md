@@ -47,21 +47,6 @@ It includes full-text search, multi-criteria filtering, serving size recalculati
    npm run dev
    ```
 
-The app will be available at:
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:5000 (Health check: http://localhost:5000/api/health)
-
-## Scripts
-
-| Command | Description |
-| :--- | :--- |
-| `npm run dev` | Runs frontend and backend concurrently |
-| `npm run client` | Starts Vite frontend development server |
-| `npm run server` | Starts Express backend server with nodemon |
-| `npm test` | Runs API smoke and integrity tests |
-| `npm --prefix client run build` | Builds frontend for production |
-| `npm run seed` | Reseeds database with seed recipes |
-
 ## License
 
 [MIT](LICENSE)
