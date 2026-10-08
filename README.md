@@ -4,43 +4,25 @@ A recipe discovery and cooking web app built with React, Node.js, and Express. B
 
 ## Features
 
-- **Search & Filters**: Search dishes by name or ingredients. Filter by category, cuisine, difficulty, and cooking time.
-- **Cooking Mode**: Fullscreen step-by-step cooking view with an ingredient drawer and step navigation.
-- **Serving Scaler**: Adjust servings up or down with automatic ingredient quantity recalculation.
-- **Ingredient Checklist**: Check off ingredients as you prep (persisted in local storage).
-- **Save Recipes**: Bookmark recipes to access them quickly from the navigation bar.
-- **Add & Edit Recipes**: Upload cover photos, add structured ingredients and steps, and edit your dishes.
-- **Ratings & Comments**: Rate dishes from 1 to 5 stars and leave comments.
-- **Dark Mode**: Toggle between light and dark themes.
-
-## Tech Stack
-
-- **Frontend**: React 18, Vite, Tailwind CSS, React Router, Lucide Icons
-- **Backend**: Node.js, Express, Multer
-- **Database**: MongoDB / Local JSON fallback (runs without database setup)
-- **Testing**: Node.js native test runner (`node:test`)
+- **Search & Filters** – Find dishes by name, ingredient, cuisine, or cook time
+- **Cooking Mode** – Fullscreen step-by-step instructions with an ingredient drawer
+- **Serving Scaler** – Adjust servings with automatic ingredient recalculation
+- **Ingredient Checklist** – Check off ingredients as you prepare your meal
+- **Saved Recipes** – Bookmark favorite dishes for quick access
+- **Add & Edit Recipes** – Upload photos, add ingredients and steps, and update your dishes
+- **Ratings & Reviews** – Rate recipes from 1 to 5 stars and leave comments
+- **Dark Mode** – Clean dark and light theme toggle
 
 ## Getting Started
 
-### Prerequisites
+```bash
+# Clone the repository
+git clone https://github.com/VinayKrishna-7/Mise.git
+cd Mise
 
-- Node.js (v18 or higher)
-- npm
+# Install dependencies
+npm run install:all
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/VinayKrishna-7/Mise.git
-   cd Mise
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm run install:all
-   ```
-
-3. Start the application:
-   ```bash
-   npm run dev
-   ```
+# Start the app
+npm run dev
+```
